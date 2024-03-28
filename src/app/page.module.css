@@ -1,8 +1,63 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
+.container {
   min-height: 100vh;
+  height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: monospace;
+}
+
+
+.animation {
+  animation: opacityAnimation 2s ease backwards;
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.leftContainer {
+  width: 40%;
+  height: 70%;
+}
+
+.letter {
+  font-size: 47px;
+  letter-spacing: 3px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(255, 60, 0);
+}
+
+.description {
+  font-size: 16px;
+  line-height: 25px;
+  color: rgb(142, 62, 1);
+}
+
+.btnContainer {
+  margin-top: 2rem;
+  cursor: pointer;
+  /* border:1px solid rgb(4, 65, 98); */
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 10px;
+  color: rgb(4, 65, 98);
+  font-family: monospace;
+  position: relative;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 10;
+  transition: stroke-dashoffset 1s ease-in;
+}
+.btnContainer:hover .path {
+  stroke-dashoffset: 0;
+  
 }
