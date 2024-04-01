@@ -100,11 +100,13 @@ mousePos = {x:0,y:0};
 
 function init(){
 scene = new THREE.Scene();
+container = document.getElementById('world');
+let rectValue = container.getBoundingClientRect();
 scene.fog = new THREE.Fog( 0x363d3d, -1, 3000 );
-HEIGHT = window.innerHeight;
-WIDTH = window.innerWidth;
+HEIGHT = rectValue.height;
+WIDTH = rectValue.width;
 aspectRatio = WIDTH / HEIGHT;
-fieldOfView = 60;
+fieldOfView = 40;
 nearPlane = 1;
 farPlane = 2000; 
 camera = new THREE.PerspectiveCamera(
@@ -118,7 +120,7 @@ camera.lookAt(new THREE.Vector3(0,0,0));
 renderer = new THREE.WebGLRenderer({alpha: true, antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
 renderer.shadowMapEnabled = true;
-container = document.getElementById('world');
+
 container.appendChild(renderer.domElement);
 windowHalfX = WIDTH / 2;
 windowHalfY = HEIGHT / 2;
@@ -130,7 +132,7 @@ document.addEventListener('touchstart', handleTouchStart, false);
 document.addEventListener('touchend', handleTouchEnd, false);
 document.addEventListener('touchmove',handleTouchMove, false);
 //*
-controls = new OrbitControls( camera, renderer.domElement);
+// controls = new OrbitControls( camera, renderer.domElement);
 //*/
 }
 
@@ -174,14 +176,14 @@ mousePos = {x:event.touches[0].pageX, y:event.touches[0].pageY};
 }
 
 function createLights() {
-light = new THREE.HemisphereLight(0xffffff, 0xffffff, .5)
+light = new THREE.HemisphereLight(0xffffff, 0xffffff, 1)
 
-shadowLight = new THREE.DirectionalLight(0xffffff, .8);
+shadowLight = new THREE.DirectionalLight(0xffffff, 1);
 shadowLight.position.set(200, 200, 200);
 shadowLight.castShadow = true;
 shadowLight.shadowDarkness = .2;
 
-backLight = new THREE.DirectionalLight(0xffffff, .4);
+backLight = new THREE.DirectionalLight(0xffffff, 1);
 backLight.position.set(-100, 200, 50);
 backLight.shadowDarkness = .2;
 backLight.castShadow = true;
@@ -502,8 +504,8 @@ var geom = new THREE.BoxGeometry(s,s,s);
 this.wire = new THREE.Line(wireGeom, this.wireMat);
 
 this.core = new THREE.Mesh(geom, this.blackMat);
-this.threegroup.add(this.core);
-this.threegroup.add(this.wire);
+// this.threegroup.add(this.core);
+// this.threegroup.add(this.wire);
 }
 
 var angleLegs = 0;

@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer": "^2.4.1",
     "lottie-react": "^2.4.0",
+    "motion": "^10.17.0",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",
@@ -18,6 +20,7 @@
   },
   "devDependencies": {
     "eslint": "^8",
-    "eslint-config-next": "14.1.4"
+    "eslint-config-next": "14.1.4",
+    "prettier": "^3.2.5"
   }
 }
