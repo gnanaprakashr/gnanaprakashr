@@ -1,0 +1,69 @@
+.landingPageContainer{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+
+    .welcomeText{
+        font-size: 46px;
+        color: #F7A541;
+        font-family: var(--font-montserrat);
+    }
+
+    .introText{
+        color: #fff;
+        font-family: var(--font-montserrat);
+    }
+
+    .letter{
+        color: #87CEEB;
+        // color: #fff;
+        font-size: 44px;
+        font-family: var(--font-montserrat);
+    }
+    .description{
+        margin-top: 10px;
+        width: 68%;
+        color: white;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: var(--font-montserrat);
+        margin-bottom: 10px;
+    }
+
+    .firstName{
+        margin-left: 15px;
+    }
+
+    .secondName{
+        margin-left: 10px;
+    }
+
+    .btnContainer{
+        cursor: pointer;
+        margin-top: 20px;
+        color: #fff;
+        background: #3c3a72;
+        display: flex;
+        padding: 10px 15px;
+        border-radius: 5px;
+        align-items: center;
+        font-family: var(--font-montserrat);
+        justify-content: center;
+        position: relative;
+
+        span{
+            font-size: 13px;
+        }
+    }
+    .btnContainer:active{
+        background: #3c3a72;
+    }
+    .btnContainer:hover{
+        background: #212257;
+    }
+}

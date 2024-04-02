@@ -1,7 +1,6 @@
 body{
   overflow-x: hidden;
   position: relative;
-  background: linear-gradient(0deg, rgba(13,35,93,1) 0%, rgba(0,5,8,1) 70%);
 }
 
 *{
@@ -14,10 +13,27 @@ canvas {
 
 #canvas {
   position: fixed;
-  z-index: -1;
+  z-index: 0;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+}
 
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.skyBackground{
+  width: 100Vw;
+  height: 100Vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(13,35,93,1) 0%, rgba(0,5,8,1) 70%);
 }

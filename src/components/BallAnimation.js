@@ -1,13 +1,20 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'
 
 const BallAnimation = () => {
      const canvasRef = useRef(null)
-     const [w, setW] = useState(window.innerWidth)
-     const [h, setH] = useState(window.innerHeight)
+     const [w, setW] = useState(0)
+     const [h, setH] = useState(0)
      let ctx
      let moon
      let stars = []
      let meteors = []
+
+     useLayoutEffect(() => {
+          if (window) {
+               setW(window.innerWidth)
+               setH(window.innerHeight)
+          }
+     }, [])
 
      useEffect(() => {
           const canvas = canvasRef.current

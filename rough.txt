@@ -1,0 +1,7 @@
+
+/* code for three js element */
+               
+<div id='world' className={'leftContainer'}>
+{/* <ThreeJsComponent /> */}
+</div>
+
