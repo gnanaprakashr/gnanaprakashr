@@ -16,6 +16,18 @@ function LandingPage() {
           }, 1)
      }, [])
 
+     const scrollToTarget = () => {
+          const target = document.getElementById('myworks')
+          const sectionWrapper = document.getElementById('sectionWrapper')
+          if (target) {
+               let targetOffset = target.offsetTop
+               sectionWrapper.scrollTo({
+                    top: targetOffset,
+                    behavior: 'smooth',
+               })
+          }
+     }
+
      return (
           <div className='landingPageContainer'>
                <h1>
@@ -40,7 +52,7 @@ function LandingPage() {
                     experiences."
                </p>
 
-               <div className={'btnContainer'} id='btnContainer'>
+               <div onClick={scrollToTarget} className={'btnContainer'} id='btnContainer'>
                     <span>View my works</span>
                </div>
           </div>

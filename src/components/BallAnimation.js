@@ -4,6 +4,8 @@ const BallAnimation = () => {
      const canvasRef = useRef(null)
      const [w, setW] = useState(0)
      const [h, setH] = useState(0)
+     const [moonPositionX, setMoonPositionX] = useState(150)
+     const [moonPositionY, setMoonPositionY] = useState(150)
      let ctx
      let moon
      let stars = []
@@ -25,6 +27,7 @@ const BallAnimation = () => {
                setH(window.innerHeight)
                canvas.width = w
                canvas.height = h
+               setMoonPositionY(150)
           }
 
           const animationLoop = () => {
@@ -47,8 +50,8 @@ const BallAnimation = () => {
 
           class Moon {
                constructor() {
-                    this.x = 150
-                    this.y = 150
+                    this.x = moonPositionX
+                    this.y = moonPositionY
                     this.size = 100
                }
                draw() {
@@ -143,10 +146,29 @@ const BallAnimation = () => {
                animationLoop()
           }
 
+          function onScroll(element) {
+               const scrollTopOffset = element.scrollTop
+               if (scrollTopOffset > moonPositionY) {
+                    moon.y = moonPositionY - scrollTopOffset
+                    moon.x = moonPositionX - scrollTopOffset
+               } else {
+                    moon.y = moonPositionY - scrollTopOffset
+                    moon.x = moonPositionX - scrollTopOffset
+               }
+          }
+
           window.addEventListener('resize', resizeReset)
+          const element = document.getElementById('sectionWrapper')
+          if (element) {
+               element.addEventListener('scroll', () => onScroll(element))
+          }
 
           return () => {
                window.removeEventListener('resize', resizeReset)
+               const element = document.getElementById('sectionWrapper')
+               if (element) {
+                    element.removeEventListener('scroll', () => {})
+               }
           }
      }, [w, h])
 

@@ -1,8 +1,8 @@
-import { Roboto } from 'next/font/google'
+import { Roboto, Manrope } from 'next/font/google'
 
-const roboto = Roboto({
+const roboto = Manrope({
      style: 'normal',
-     weight: ['100', '300', '500', '700', '900'],
+     weight: ['300', '500', '700'],
      variable: '--font-roboto',
      subsets: ['latin'],
 })
