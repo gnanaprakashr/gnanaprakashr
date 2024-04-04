@@ -54,9 +54,14 @@ function Experience() {
                <div className='techContainer'>
                     <h3>Technologies:</h3>
                     <div style={{ width: '100%', display: 'flex', flexWrap: 'wrap' }}>
-                         {technologies.map((tech) => {
+                         {technologies.map((tech, i) => {
                               return (
-                                   <a className='technologies' href={tech.link} target='_blank'>
+                                   <a
+                                        className='technologies'
+                                        key={i}
+                                        href={tech.link}
+                                        target='_blank'
+                                   >
                                         {tech.name}
                                    </a>
                               )

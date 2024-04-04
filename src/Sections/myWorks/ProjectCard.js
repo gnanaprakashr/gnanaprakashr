@@ -8,6 +8,13 @@ function ProjectCard({ workData }) {
      const [hoverIndex, setHoverIndex] = useState(null)
      const [isHovered, setIsHovered] = useState(false)
      const [width, setWidth] = useState(0)
+     const [windowWidth, setWindowWidth] = useState(null)
+
+     useEffect(() => {
+          if (window) {
+               setWindowWidth(window.innerWidth)
+          }
+     }, [])
 
      useLayoutEffect(() => {
           const element = document.getElementById(`${workData.name}_mockup`)
@@ -54,7 +61,7 @@ function ProjectCard({ workData }) {
                               <h3 style={{ color: workData.colorCode }}>{workData.name}</h3>
                               <p>{workData.description}</p>
                          </div>
-                         {window?.innerWidth <= 500 && (
+                         {windowWidth <= 500 && (
                               <div className='rotateIconContainer'>
                                    <svg
                                         width='32'
@@ -66,18 +73,22 @@ function ProjectCard({ workData }) {
                                         <path
                                              d='M14.266 13.9555C14.833 13.9845 15.412 13.9996 16 13.9996C23.18 13.9996 29 11.7461 29 8.96672C29 7.35495 28 5.99934 24.002 4.99957M10 13.4321C5.84 12.5929 3 10.9081 3 8.96672V8.96672C3 7.47194 4.61294 6.57249 5.99138 5.99434C11.6586 3.61738 20.001 4.11061 24 4.99957'
                                              stroke={`${workData.colorCode}`}
-                                             stroke-width='2'
-                                             stroke-miterlimit='10'
-                                             stroke-linecap='round'
-                                             stroke-linejoin='round'
+                                             style={{
+                                                  strokeWidth: '2',
+                                                  strokeMiterlimit: '10',
+                                                  strokeLinecap: 'round',
+                                                  strokeLinejoin: 'round',
+                                             }}
                                         />
                                         <path
                                              d='M17 11L14 14L17 17'
                                              stroke={`${workData.colorCode}`}
-                                             stroke-width='2'
-                                             stroke-miterlimit='10'
-                                             stroke-linecap='round'
-                                             stroke-linejoin='round'
+                                             style={{
+                                                  strokeWidth: '2',
+                                                  strokeMiterlimit: '10',
+                                                  strokeLinecap: 'round',
+                                                  strokeLinejoin: 'round',
+                                             }}
                                         />
                                    </svg>
                               </div>
@@ -120,7 +131,7 @@ function ProjectCard({ workData }) {
                                    })}
                               </div>
                          </div>
-                         {window?.innerWidth <= 500 && (
+                         {windowWidth <= 500 && (
                               <div className='rotateIconContainer'>
                                    <svg
                                         width='32'
@@ -132,18 +143,22 @@ function ProjectCard({ workData }) {
                                         <path
                                              d='M14.266 13.9555C14.833 13.9845 15.412 13.9996 16 13.9996C23.18 13.9996 29 11.7461 29 8.96672C29 7.35495 28 5.99934 24.002 4.99957M10 13.4321C5.84 12.5929 3 10.9081 3 8.96672V8.96672C3 7.47194 4.61294 6.57249 5.99138 5.99434C11.6586 3.61738 20.001 4.11061 24 4.99957'
                                              stroke={`${workData.colorCode}`}
-                                             stroke-width='2'
-                                             stroke-miterlimit='10'
-                                             stroke-linecap='round'
-                                             stroke-linejoin='round'
+                                             style={{
+                                                  strokeWidth: '2',
+                                                  strokeMiterlimit: '10',
+                                                  strokeLinecap: 'round',
+                                                  strokeLinejoin: 'round',
+                                             }}
                                         />
                                         <path
                                              d='M17 11L14 14L17 17'
                                              stroke={`${workData.colorCode}`}
-                                             stroke-width='2'
-                                             stroke-miterlimit='10'
-                                             stroke-linecap='round'
-                                             stroke-linejoin='round'
+                                             style={{
+                                                  strokeWidth: '2',
+                                                  strokeMiterlimit: '10',
+                                                  strokeLinecap: 'round',
+                                                  strokeLinejoin: 'round',
+                                             }}
                                         />
                                    </svg>
                               </div>
