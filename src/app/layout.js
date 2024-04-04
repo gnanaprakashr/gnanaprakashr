@@ -3,6 +3,8 @@ import './globals.css'
 import montserrat from '@/assets/fonts/montserrat'
 import montserrat_Alternates from '@/assets/fonts/montserrat_Alternates'
 import roboto from '@/assets/fonts/Roboto'
+import Loading from './loading'
+import { Suspense } from 'react'
 
 export const metadata = {
      title: 'Create Next App',
@@ -15,7 +17,20 @@ export default function RootLayout({ children }) {
                lang='en'
                className={`${montserrat.variable} ${montserrat_Alternates.variable} ${roboto.variable}`}
           >
-               <body>{children}</body>
+               <body>
+                    <Suspense fallback={<Loading />}>
+                         <div
+                              style={{
+                                   width: '100%',
+                                   height: '100%',
+                                   overflow: 'hidden',
+                                   position: 'relative',
+                              }}
+                         >
+                              {children}
+                         </div>
+                    </Suspense>
+               </body>
           </html>
      )
 }
