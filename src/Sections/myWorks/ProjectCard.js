@@ -22,7 +22,7 @@ function ProjectCard({ workData }) {
                let { width } = element.getBoundingClientRect()
                setWidth(width * 0.8)
           }
-     }, [])
+     }, [workData])
 
      const onClickFunc = () => {
           if (window?.innerWidth <= 500) {
@@ -55,7 +55,11 @@ function ProjectCard({ workData }) {
                               className='imageContainer'
                               style={{ width: '100%', height: '60%', overflow: 'hidden' }}
                          >
-                              <img className='coverImage' src={workData.coverImage}></img>
+                              <Image
+                                   className='coverImage'
+                                   alt='Cover Image'
+                                   src={workData.coverImage}
+                              ></Image>
                          </div>
                          <div className='bottomContainer'>
                               <h3 style={{ color: workData.colorCode }}>{workData.name}</h3>

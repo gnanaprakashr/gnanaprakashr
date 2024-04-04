@@ -70,11 +70,11 @@ function LandingPage() {
                     </span>
                </h1>
                <p className={'description'}>
-                    "As a frontend developer with experience in React, React Native, and Next.js, I
+                    As a frontend developer with experience in React, React Native, and Next.js, I
                     specialize in building user-friendly interfaces for both web and mobile
                     platforms. Currently focused on developing responsive websites using Next.js, I
                     bring a versatile skill set and a commitment to delivering optimal user
-                    experiences."
+                    experiences.
                </p>
 
                <h4 className='languages'>

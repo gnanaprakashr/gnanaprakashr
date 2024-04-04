@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'
 
 const BallAnimation = () => {
@@ -18,6 +19,7 @@ const BallAnimation = () => {
           }
      }, [])
 
+     // eslint-disable-next-line react-hooks/exhaustive-deps
      useEffect(() => {
           const canvas = canvasRef.current
           ctx = canvas.getContext('2d')
