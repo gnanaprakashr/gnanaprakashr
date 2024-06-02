@@ -55,12 +55,11 @@ function ProjectCard({ workData }) {
                               className='imageContainer'
                               style={{ width: '100%', height: '60%', overflow: 'hidden' }}
                          >
-                              <Image
+                              <img
                                    className='coverImage'
                                    alt='Cover Image'
-                                   fill
                                    src={workData.coverImage}
-                              ></Image>
+                              ></img>
                          </div>
                          <div className='bottomContainer'>
                               <h3 style={{ color: workData.colorCode }}>{workData.name}</h3>
