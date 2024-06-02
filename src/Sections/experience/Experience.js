@@ -16,16 +16,20 @@ function Experience() {
                link: 'https://expo.dev/',
           },
           {
+               name: 'NEXT JS',
+               link: 'https://nextjs.org/',
+          },
+          {
+               name: 'TAILWIND CSS',
+               link: 'https://tailwindcss.com/',
+          },
+          {
+               name: 'FIREBASE',
+               link: 'https://firebase.google.com/',
+          },
+          {
                name: 'FIGMA',
                link: 'https://www.figma.com/',
-          },
-          {
-               name: 'ANT DESIGN',
-               link: 'https://ant.design/',
-          },
-          {
-               name: 'GSAP',
-               link: 'https://gsap.com/',
           },
      ]
      return (

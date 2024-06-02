@@ -58,6 +58,7 @@ function ProjectCard({ workData }) {
                               <Image
                                    className='coverImage'
                                    alt='Cover Image'
+                                   fill
                                    src={workData.coverImage}
                               ></Image>
                          </div>

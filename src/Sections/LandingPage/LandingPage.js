@@ -70,16 +70,18 @@ function LandingPage() {
                     </span>
                </h1>
                <p className={'description'}>
-                    As a frontend developer with experience in React, React Native, and Next.js, I
-                    specialize in building user-friendly interfaces for both web and mobile
-                    platforms. Currently focused on developing responsive websites using Next.js, I
+
+                    As a frontend developer with 2 years of expertise in React JS, React Native Next.js, committed to
+pushing conventional boundaries to create innovative web and mobile solutions that
+elevate the technological experience. I
                     bring a versatile skill set and a commitment to delivering optimal user
-                    experiences.
+                    experiences. I have successfully led a team of 6 individuals
+on multiple projects, consistently delivering state-of-the-art solutions.
                </p>
 
                <h4 className='languages'>
                     JS <span className='line'>|</span> React <span className='line'>|</span> React
-                    Native
+                    Native <span className='line'>|</span> Next Js
                </h4>
 
                <div onClick={scrollToTarget} className={'btnContainer'} id='btnContainer'>
@@ -117,7 +119,7 @@ function LandingPage() {
                          </svg>
                     </a>
                     <a
-                         href='./Gnana_Prakash_R_CV.pdf'
+                         href='./Gnana_prakash_resume.pdf'
                          download={'Gnana_Prakash_R_CV'}
                          title='Resume'
                     >
